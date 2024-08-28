@@ -21,3 +21,23 @@
     </form>
 </body>
 </html>
+
+<?php
+
+    if (isset($_POST['registar'])) {
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+
+        $sql = "INSERT INTO usuarios (nome,email,telefone) VALUES ('$nome','$email','$telefone')";
+        try {
+            $resultado = mysqli_query($conexao, $sql);
+            header("location: mostrar.php");
+        }
+        catch (mysqli_sql_exception) {
+            echo "falha ao inserir";
+        }
+    }
+
+    mysqli_close($conexao);
+?>
