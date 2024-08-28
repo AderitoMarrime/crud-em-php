@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <button><a href="index.php">Adicionar usuario</a></button> <br> <br>
     <table>
         <thead>
             <tr>
@@ -37,8 +38,8 @@
                         <td>'.$email.'</td>
                         <td>'.$telefone.'</td>
                         <td>
-                            <button><a href="">Atualizar</a></button>
-                            <button><a href="">Deletar</a></button>
+                            <button><a href="atualizar.php?atualizarid='.$id.'">Atualizar</a></button>
+                            <button><a href="deletar.php?deletarid='.$id.'">Deletar</a></button>
                         </td>
                     </tr>
                 ';
@@ -48,3 +49,7 @@
     </table>
 </body>
 </html>
+
+<?php
+    mysqli_close($conexao);
+?>
