@@ -38,8 +38,8 @@
                         <td>'.$email.'</td>
                         <td>'.$telefone.'</td>
                         <td>
-                            <button><a href="atualizar.php?atualizarid='.$id.'">Atualizar</a></button>
-                            <button><a href="deletar.php?deletarid='.$id.'">Deletar</a></button>
+                            <button><a href="atualizar.php?atualizarid=' . $id . '">Atualizar</a></button>
+                            <button><a href="deletar.php?deletarid=' . $id . '">Deletar</a></button>
                         </td>
                     </tr>
                 ';
