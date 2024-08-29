@@ -22,7 +22,7 @@
         $resultado = mysqli_query($conexao, $sql);
 
         if ($resultado) {
-            echo "Atualizado";
+            header("location: mostrar.php");
         } else {
             echo"erro ao atualizar";
         }
